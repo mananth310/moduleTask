@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Pacifico&display=swap');
+.navbar{
+    background-color: purple;
+    padding: 3px;
+}
+.navbar a{
+    color: white!important;
+}
+body{
+    background-color: pink;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -10%;
+}
+.clock{
+    width: 300px;
+    height: 300px;
+    background-image: url(img/bc1.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    border: 10px ridge red;
+    position: relative;
+}
+.clock::after{
+    content: "";
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: red;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.clock::before{
+    content: "Y CUBE";
+    position: absolute;
+    top:70%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 15pt;
+    font-weight: bold;
+    font-family: "Lobster", sans-serif;
+    color: purple;
+}
+.number{
+    --rotate:0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    text-align: center;
+    color: purple;
+    font-size: 13pt;
+    font-weight: bolder;
+    transform: rotate(var(--rotate));
+}
+.number-1{--rotate:30deg;}
+.number-2{--rotate:60deg;}
+.number-3{--rotate:90deg;}
+.number-4{--rotate:120deg;}
+.number-5{--rotate:150deg;}
+.number-6{--rotate:180deg;}
+.number-7{--rotate:210deg;}
+.number-8{--rotate:240deg;}
+.number-9{--rotate:270deg;}
+.number-10{--rotate:300deg;}
+.number-11{--rotate:330deg;}
+
+.point{
+    --rotation:0;
+    position: absolute;
+    transform: translateX(-50%) rotate(calc(var(--rotation)*1deg));
+    transform-origin: bottom;
+    bottom: 50%;
+    left: 50%;
+    border-top-left-radius:50% ;
+    border-top-right-radius:50% ;
+    
+}
+.sec {
+    width:3px;
+    height: 40%;
+    background-color: purple;
+}
+.min{
+    width: 8px;
+    height: 35%;
+    background-color: purple;
+}
+.hrs{
+    width: 10px;
+    height: 30%;
+    background-color: purple;
+}
